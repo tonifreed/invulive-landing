@@ -459,9 +459,9 @@ body {
     text-align: center;
     background-image: linear-gradient(180deg, rgba(5, 5, 17, 0.7) 0%, rgba(5, 5, 17, 0.4) 50%, var(--dark-bg) 100%), url('hero-banner-no-logo.webp');
     background-size: cover;
-    background-position: center;
+    background-position: center 60%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 .hero-subtitle-top {
