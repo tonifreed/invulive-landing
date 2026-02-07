@@ -23,16 +23,32 @@
                 <span class="logo-text">INVU<span class="logo-accent">LIVE</span></span>
             </a>
             <div class="nav-actions">
-                <a href="#tickets" class="btn-outline">
-                    <span>Get Tickets</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                    </svg>
-                </a>
+                <div class="ticket-dropdown">
+                    <button class="btn-outline dropdown-trigger">
+                        <span>Get Tickets</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#tickets" class="dropdown-item" data-tickets="5">
+                            <span class="dropdown-qty">5</span>
+                            <span class="dropdown-label">Tickets</span>
+                            <span class="dropdown-price">$25</span>
+                        </a>
+                        <a href="#tickets" class="dropdown-item" data-tickets="10">
+                            <span class="dropdown-qty">10</span>
+                            <span class="dropdown-label">Tickets</span>
+                            <span class="dropdown-price">$40</span>
+                        </a>
+                        <a href="#tickets" class="dropdown-item" data-tickets="50">
+                            <span class="dropdown-qty">50</span>
+                            <span class="dropdown-label">Tickets</span>
+                            <span class="dropdown-price">$100</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
