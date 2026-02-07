@@ -278,13 +278,12 @@ body {
 }
 
 .btn-cyan-solid:hover {
-    background: rgba(255, 255, 255, 0.08);
-    /* Brighter glass on hover */
-    border-top-color: rgba(255, 255, 255, 0.5);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 20px rgba(34, 211, 238, 0.15);
+    background: rgba(34, 211, 238, 0.15);
+    border-color: rgba(34, 211, 238, 0.5);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.3), inset 0 0 10px rgba(34, 211, 238, 0.1);
     transform: translateY(-2px);
     color: #fff;
-    text-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
+    text-shadow: 0 0 8px rgba(34, 211, 238, 0.8);
 }
 
 .btn-outline {
@@ -365,42 +364,73 @@ body {
     text-transform: uppercase;
 }
 
-/* Stacked Button Styles */
-/* Stacked Button Styles (Legacy - now Ticket Item) */
-.ticket-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.btn-ticket-main {
+/* Glass Ticket Buttons */
+.ticket-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    width: 100%;
-    min-width: 160px;
+    gap: 0.4rem;
+    padding: 0.75rem 1.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    text-decoration: none;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-.ticket-price-display {
+.ticket-btn:hover {
+    background: rgba(34, 211, 238, 0.1);
+    border-color: rgba(34, 211, 238, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ticket-qty {
     font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-cyan);
-    text-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
-    letter-spacing: 1px;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 900;
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
 }
 
-.btn-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Left align text */
-    line-height: 1.2;
-    margin-left: 0.5rem;
-    /* Space from icon */
+.ticket-text {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--primary-cyan);
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+/* Price appears on hover via ::after */
+.ticket-btn::after {
+    content: attr(data-price);
+    position: absolute;
+    right: -50px;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-cyan);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.ticket-btn:hover::after {
+    right: 1rem;
+    opacity: 1;
+}
+
+.ticket-btn:hover .ticket-text {
+    opacity: 0;
 }
 
 .btn-title {
@@ -589,24 +619,52 @@ body {
     margin-bottom: 2.5rem;
 }
 
-.about-highlights {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+.about-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
-    flex-wrap: wrap;
 }
 
-.highlight-item {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    font-weight: 500;
+.highlight-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.highlight-box:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(34, 211, 238, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-icon {
+    margin-bottom: 1rem;
     color: var(--primary-cyan);
-    background: rgba(34, 211, 238, 0.08);
-    padding: 0.75rem 1.5rem;
-    border-radius: 100px;
-    border: 1px solid rgba(34, 211, 238, 0.2);
-    box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+    background: rgba(34, 211, 238, 0.1);
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight-text {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-align: center;
 }
 
 .about-text {
@@ -721,6 +779,15 @@ body {
     color: var(--primary-purple);
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.speaker-bio {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
 }
 
 /* ===== Results Section ===== */
@@ -1023,11 +1090,7 @@ body {
 
 /* Removed duplicate .btn-cyan-solid definition to allow glass style to apply */
 
-.btn-cyan-solid:hover {
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.6);
-    transform: translateY(-2px);
-    background: #fff;
-}
+
 
 .hero-title {
     margin-bottom: 1rem;
@@ -1694,25 +1757,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.ticket-qty {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 4rem;
-    font-weight: 900;
-    background: var(--gradient-neon);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1;
-}
-
-.ticket-label {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    letter-spacing: 3px;
-}
+/* ticket-qty styles defined earlier in glass button section */
 
 .ticket-price {
     font-family: var(--font-display);

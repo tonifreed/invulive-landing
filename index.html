@@ -124,56 +124,18 @@
                 <p class="hero-card-subtitle">Secure your place at this one-day leadership experience.<br>
                     Ticket packages are designed to make it easy to attend with partners and teams.</p>
                 <div class="hero-tickets-grid">
-                    <div class="ticket-item">
-                        <a href="#tickets" class="btn-cyan-solid btn-ticket-main">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                                <path d="M4 22h16"></path>
-                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-                            </svg>
-                            <span>5 TICKETS</span>
-                        </a>
-                        <span class="ticket-price-display">$25</span>
-                    </div>
-
-                    <div class="ticket-item">
-                        <a href="#tickets" class="btn-cyan-solid btn-ticket-main">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                                <path d="M4 22h16"></path>
-                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-                            </svg>
-                            <span>10 TICKETS</span>
-                        </a>
-                        <span class="ticket-price-display">$40</span>
-                    </div>
-
-                    <div class="ticket-item">
-                        <a href="#tickets" class="btn-cyan-solid btn-ticket-main">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                                <path d="M4 22h16"></path>
-                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-                            </svg>
-                            <span>50 TICKETS</span>
-                        </a>
-                        <span class="ticket-price-display">$100</span>
-                    </div>
+                    <a href="#tickets" class="ticket-btn" data-price="$25">
+                        <span class="ticket-qty">5</span>
+                        <span class="ticket-text">TICKETS</span>
+                    </a>
+                    <a href="#tickets" class="ticket-btn" data-price="$40">
+                        <span class="ticket-qty">10</span>
+                        <span class="ticket-text">TICKETS</span>
+                    </a>
+                    <a href="#tickets" class="ticket-btn" data-price="$100">
+                        <span class="ticket-qty">50</span>
+                        <span class="ticket-text">TICKETS</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -194,11 +156,41 @@
                     Throughout the day, you’ll hear from every leader on the lineup, each sharing insights, experiences,
                     and practical perspectives on leadership, mindset, teamwork, and personal development.
                 </p>
-                <div class="about-highlights">
-                    <div class="highlight-item">No fluff.</div>
-                    <div class="highlight-item">No overpromising.</div>
-                    <div class="highlight-item highlight-long">Just thoughtful conversations, real-world takeaways, and
-                        an environment designed to help you move forward with clarity.</div>
+                <div class="about-highlights-grid">
+                    <div class="highlight-box">
+                        <div class="highlight-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="15" y1="9" x2="9" y2="15"></line>
+                                <line x1="9" y1="9" x2="15" y2="15"></line>
+                            </svg>
+                        </div>
+                        <span class="highlight-text">No fluff.</span>
+                    </div>
+                    <div class="highlight-box">
+                        <div class="highlight-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="highlight-text">No overpromising.</span>
+                    </div>
+                    <div class="highlight-box">
+                        <div class="highlight-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <span class="highlight-text">Real clarity.</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -218,6 +210,9 @@
                     </div>
                     <div class="speaker-name">Chad Garner</div>
                     <div class="speaker-title">President of Conectiv</div>
+                    <p class="speaker-bio">President of Conectiv and an experienced leader in sales, operations, and
+                        marketing. Chad is known for his thoughtful leadership approach and his commitment to building
+                        strong teams and a healthy organizational culture.</p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-photo-wrapper">
@@ -225,13 +220,19 @@
                     </div>
                     <div class="speaker-name">Anthony Napolitano</div>
                     <div class="speaker-title">Entrepreneur & Investor</div>
+                    <p class="speaker-bio">Entrepreneur, investor, and mentor with a passion for leadership development.
+                        Anthony focuses on helping individuals grow through consistency, discipline, and long-term
+                        thinking.</p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-photo-wrapper">
                         <img src="david-imonitie.webp" alt="David Imonitie" class="speaker-photo">
                     </div>
                     <div class="speaker-name">David Imonitie</div>
-                    <div class="speaker-title">Founder of Believe Nation</div>
+                    <div class="speaker-title">Author & Entrepreneur</div>
+                    <p class="speaker-bio">Serial entrepreneur who made his first million dollars at the age of 27.
+                        David is an internationally recognized speaker and author who inspires belief-driven leadership
+                        and encourages individuals to step confidently into their personal and professional growth.</p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-photo-wrapper">
@@ -239,6 +240,9 @@
                     </div>
                     <div class="speaker-name">Dr. Gary McSween</div>
                     <div class="speaker-title">Top 200 Earner Worldwide</div>
+                    <p class="speaker-bio">Global business leader and mentor with experience building organizations
+                        across multiple regions. Gary emphasizes leadership development, values-based decision-making,
+                        and personal responsibility.</p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-photo-wrapper">
@@ -246,6 +250,9 @@
                     </div>
                     <div class="speaker-name">Bass Grant</div>
                     <div class="speaker-title">$34M+ Career Revenue</div>
+                    <p class="speaker-bio">Veteran leader in the personal development and relationship marketing space.
+                        Bass brings high energy, experience, and a principle-centered approach to leadership and growth.
+                    </p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-photo-wrapper">
@@ -253,13 +260,18 @@
                     </div>
                     <div class="speaker-name">Lisa Nicole Cloud</div>
                     <div class="speaker-title">Entrepreneur & Leader</div>
+                    <p class="speaker-bio">Entrepreneur and leader passionate about mindset, empowerment, and personal
+                        development. Lisa supports individuals in building confidence, clarity, and intentional action.
+                    </p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-photo-wrapper">
                         <img src="stephon-royal.webp" alt="Stephon Royal" class="speaker-photo">
                     </div>
                     <div class="speaker-name">Stephon Royal</div>
-                    <div class="speaker-title">High-Energy Leader</div>
+                    <div class="speaker-title">Dynamic Leader</div>
+                    <p class="speaker-bio">Dynamic leader known for bringing focus, energy, and accountability to teams.
+                        Stephon emphasizes discipline, mindset, and consistent personal growth.</p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-photo-wrapper">
@@ -267,6 +279,9 @@
                     </div>
                     <div class="speaker-name">Tracy & Kay Fisher</div>
                     <div class="speaker-title">Leadership Team</div>
+                    <p class="speaker-bio">Husband-and-wife leadership team dedicated to mentorship, teamwork, and
+                        culture. Tracy and Kay are known for their people-first approach and steady, values-driven
+                        leadership.</p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-photo-wrapper">
@@ -275,6 +290,9 @@
                     </div>
                     <div class="speaker-name">Jeff & Angela Cruickshank</div>
                     <div class="speaker-title">Culture & Systems Leaders</div>
+                    <p class="speaker-bio">Husband-and-wife leaders focused on systems, structure, and sustainable team
+                        development. Jeff and Angela help leaders build strong foundations that support long-term
+                        progress.</p>
                 </div>
             </div>
         </div>
@@ -297,7 +315,7 @@
                             <line x1="6" y1="20" x2="6" y2="14"></line>
                         </svg>
                     </span>
-                    <span class="result-text">Proven strategies from leaders who are actively building</span>
+                    <span class="result-text">Practical leadership insights you can apply immediately</span>
                 </div>
                 <div class="result-card">
                     <span class="result-icon">
@@ -311,7 +329,7 @@
                             </path>
                         </svg>
                     </span>
-                    <span class="result-text">Leadership and mindset tools you can apply immediately</span>
+                    <span class="result-text">Fresh perspective on mindset, growth, and teamwork</span>
                 </div>
                 <div class="result-card">
                     <span class="result-icon">
@@ -322,7 +340,7 @@
                             <circle cx="12" cy="12" r="2"></circle>
                         </svg>
                     </span>
-                    <span class="result-text">Clear direction for your next level</span>
+                    <span class="result-text">Meaningful connections with leaders and peers</span>
                 </div>
                 <div class="result-card">
                     <span class="result-icon">
@@ -331,10 +349,11 @@
                             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                         </svg>
                     </span>
-                    <span class="result-text">Energy, confidence, and momentum you can't get from a screen</span>
+                    <span class="result-text">Renewed focus, confidence, and motivation</span>
                 </div>
             </div>
-            <p class="results-tagline">This is the kind of day that resets your standard.</p>
+            <p class="results-tagline">This is the kind of day that helps you reset your direction and reconnect with
+                your purpose.</p>
         </div>
     </section>
 
@@ -344,12 +363,18 @@
     <section class="final-cta-section">
         <div class="section-container">
             <div class="cta-box">
-                <h2 class="cta-headline">This Event Is Not For Everyone</h2>
-                <p class="cta-text">If you're looking to stay comfortable, this isn't your room.<br>If you're ready to
-                    grow, lead, and execute, this is where it starts.</p>
+                <h2 class="cta-headline">THIS EVENT IS FOR PEOPLE WHO…</h2>
+                <p class="cta-text">Value personal growth and leadership development</p>
+                <p class="cta-text">Want to learn in a live, collaborative environment</p>
+                <p class="cta-text">Believe community and connection matter</p>
+                <p class="cta-text">Are ready to invest a day in their future direction</p>
+
+                <p class="cta-text" style="margin-top: 1.5rem; font-weight: 600; color: #fff;">If that resonates, this
+                    room is for you.</p>
+
                 <div class="cta-divider"></div>
-                <p class="cta-date">March 28. One day. One decision.</p>
-                <p class="cta-tagline">Momentum doesn't wait.</p>
+                <p class="cta-date">March 28. One Day. One Shared Experience.</p>
+                <p class="cta-tagline">Momentum grows when people come together with intention.</p>
                 <a href="#tickets" class="btn-cyan-solid btn-large">Secure Your Spot Now</a>
             </div>
         </div>
