@@ -2126,7 +2126,7 @@ body {
 @media (max-width: 1024px) {
     .main-content {
         background-attachment: scroll;
-        background-position: center top;
+        background-position: center 60%;
     }
 }
 
