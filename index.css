@@ -2138,12 +2138,11 @@ body {
         filter: grayscale(0%);
     }
 
-    /* Fix hero background for mobile - show full skyline */
+    /* Fix hero background for mobile/tablet - show full skyline */
     .main-content {
         background-attachment: scroll;
-        background-size: contain;
-        background-position: center top;
-        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 60%;
         padding: 6rem 1rem 3rem;
     }
 
