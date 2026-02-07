@@ -80,6 +80,31 @@ body {
     }
 }
 
+/* ===== Float Animation for Cards ===== */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes floatSubtle {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
 /* ===== Navigation ===== */
 .navbar {
     position: fixed;
@@ -638,6 +663,15 @@ body {
     border-radius: 12px;
     backdrop-filter: blur(10px);
     transition: var(--transition);
+    animation: floatSubtle 5s ease-in-out infinite;
+}
+
+.highlight-box:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.highlight-box:nth-child(3) {
+    animation-delay: 1.6s;
 }
 
 .highlight-box:hover {
@@ -716,6 +750,39 @@ body {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    animation: floatSubtle 6s ease-in-out infinite;
+}
+
+.speaker-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.speaker-card:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.speaker-card:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.speaker-card:nth-child(5) {
+    animation-delay: 2s;
+}
+
+.speaker-card:nth-child(6) {
+    animation-delay: 2.5s;
+}
+
+.speaker-card:nth-child(7) {
+    animation-delay: 3s;
+}
+
+.speaker-card:nth-child(8) {
+    animation-delay: 3.5s;
+}
+
+.speaker-card:nth-child(9) {
+    animation-delay: 4s;
 }
 
 .speaker-card::before {
@@ -813,6 +880,19 @@ body {
     border-top: 0.5px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     transition: var(--transition);
+    animation: floatSubtle 5.5s ease-in-out infinite;
+}
+
+.result-card:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.result-card:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+.result-card:nth-child(4) {
+    animation-delay: 2.1s;
 }
 
 .result-card:hover {
@@ -1952,4 +2032,54 @@ body {
 
 .ticket-card.featured:hover {
     transform: translateY(-8px);
+}
+
+/* ===== Mobile Responsive Enhancements ===== */
+
+/* iPad and tablets - fix background */
+@media (max-width: 1024px) {
+    .main-content {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+}
+
+/* Mobile - colored photos and background fixes */
+@media (max-width: 768px) {
+
+    /* Show speaker photos in color on mobile (no grayscale) */
+    .speaker-photo {
+        filter: grayscale(0%);
+    }
+
+    /* Fix hero background for mobile */
+    .main-content {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center top;
+        padding: 6rem 1rem 3rem;
+    }
+
+    /* Reduce animation intensity on mobile for performance */
+    .speaker-card,
+    .highlight-box,
+    .result-card {
+        animation: none;
+    }
+
+    /* Hero cards stack nicely */
+    .hero-cards-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero-card {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .hero-tickets-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
 }
