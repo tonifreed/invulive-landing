@@ -375,6 +375,10 @@ body {
     transition: transform 0.3s ease;
 }
 
+.icon-ticket {
+    display: none;
+}
+
 .ticket-dropdown:hover .dropdown-trigger svg {
     transform: rotate(180deg);
 }
@@ -2181,6 +2185,15 @@ body {
 
     .btn-outline span {
         display: none;
+    }
+
+    /* Show ticket icon on mobile, hide chevron */
+    .icon-ticket {
+        display: block !important;
+    }
+
+    .icon-chevron {
+        display: none !important;
     }
 
     .logo-text {
